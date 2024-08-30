@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoDataViewController" customModule="AngusNative" customModuleProvider="target">
+            <connections>
+                <outlet property="caption" destination="2DR-Ub-JM7" id="VF6-wk-kIx"/>
+                <outlet property="message" destination="fgS-Ax-8Hw" id="ceG-J8-pK8"/>
+                <outlet property="noRequestLayer1" destination="H7t-uC-rgJ" id="zyo-PK-o6h"/>
+                <outlet property="noRequestLayer2" destination="ZjC-d4-xsi" id="mUN-24-2zt"/>
+                <outlet property="noRequestLayer3" destination="IWP-Jw-7Kt" id="uYb-aZ-bVI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x0Q-lU-32A">
+                    <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Title" id="o7q-RV-jJp"/>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqD-L7-yah" userLabel="ThemeView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eve-nu-vHZ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="269"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-request-layer1" translatesAutoresizingMaskIntoConstraints="NO" id="H7t-uC-rgJ" userLabel="no-request" customClass="ThemeImageView" customModule="Asgl_iOS_SDK_Theme">
+                    <rect key="frame" x="119.5" y="269" width="175" height="117.5"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-request-layer2" translatesAutoresizingMaskIntoConstraints="NO" id="ZjC-d4-xsi" customClass="ThemeImageView" customModule="Asgl_iOS_SDK_Theme">
+                    <rect key="frame" x="119.5" y="269" width="175" height="117.5"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="type" value="secondary"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-request-layer3" translatesAutoresizingMaskIntoConstraints="NO" id="IWP-Jw-7Kt" customClass="ThemeImageView" customModule="Asgl_iOS_SDK_Theme">
+                    <rect key="frame" x="119.5" y="269" width="175" height="117.5"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="type" value="tertiary"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no requests" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgS-Ax-8Hw" customClass="ThemeLabel" customModule="Asgl_iOS_SDK_Theme">
+                    <rect key="frame" x="8" y="418.5" width="398" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="Title1"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you submit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DR-Ub-JM7" userLabel="caption" customClass="ThemeLabel" customModule="Asgl_iOS_SDK_Theme">
+                    <rect key="frame" x="24" y="455.5" width="366" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="Body"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="H7t-uC-rgJ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="1Id-Gv-wX0"/>
+                <constraint firstItem="eve-nu-vHZ" firstAttribute="top" secondItem="YqD-L7-yah" secondAttribute="top" id="3Sa-pk-p9a"/>
+                <constraint firstItem="eve-nu-vHZ" firstAttribute="trailing" secondItem="YqD-L7-yah" secondAttribute="trailing" id="3mM-pk-oZM"/>
+                <constraint firstItem="eve-nu-vHZ" firstAttribute="leading" secondItem="YqD-L7-yah" secondAttribute="leading" id="6L0-Za-eGI"/>
+                <constraint firstAttribute="bottom" secondItem="YqD-L7-yah" secondAttribute="bottom" id="6Zc-34-OQR"/>
+                <constraint firstItem="fgS-Ax-8Hw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="BHk-C5-aa0"/>
+                <constraint firstItem="eve-nu-vHZ" firstAttribute="height" secondItem="YqD-L7-yah" secondAttribute="height" multiplier="0.3" id="CBR-Bh-soU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2DR-Ub-JM7" secondAttribute="trailing" constant="24" id="IOT-T1-bgS"/>
+                <constraint firstItem="IWP-Jw-7Kt" firstAttribute="centerX" secondItem="ZjC-d4-xsi" secondAttribute="centerX" id="KSf-31-afm"/>
+                <constraint firstItem="YqD-L7-yah" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QV2-hs-88e"/>
+                <constraint firstItem="IWP-Jw-7Kt" firstAttribute="centerY" secondItem="ZjC-d4-xsi" secondAttribute="centerY" id="QVD-0f-6aq"/>
+                <constraint firstItem="2DR-Ub-JM7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="STx-Ph-sAx"/>
+                <constraint firstItem="2DR-Ub-JM7" firstAttribute="top" secondItem="fgS-Ax-8Hw" secondAttribute="bottom" constant="8" id="cjV-dt-uqI"/>
+                <constraint firstItem="H7t-uC-rgJ" firstAttribute="top" secondItem="eve-nu-vHZ" secondAttribute="bottom" id="ecm-sR-nVx"/>
+                <constraint firstItem="YqD-L7-yah" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hdP-OF-CQu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YqD-L7-yah" secondAttribute="trailing" id="jj6-hn-vlS"/>
+                <constraint firstItem="fgS-Ax-8Hw" firstAttribute="top" secondItem="H7t-uC-rgJ" secondAttribute="bottom" constant="32" id="mJP-pO-gs5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fgS-Ax-8Hw" secondAttribute="trailing" constant="8" id="p24-Ua-jvT"/>
+                <constraint firstItem="ZjC-d4-xsi" firstAttribute="centerX" secondItem="H7t-uC-rgJ" secondAttribute="centerX" id="qek-LG-QlL"/>
+                <constraint firstItem="ZjC-d4-xsi" firstAttribute="centerY" secondItem="H7t-uC-rgJ" secondAttribute="centerY" id="sbv-a6-wy2"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="112"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="2DR-Ub-JM7">
+            <size key="intrinsicContentSize" width="126.5" height="19.5"/>
+        </designable>
+        <designable name="H7t-uC-rgJ">
+            <size key="intrinsicContentSize" width="175" height="117.5"/>
+        </designable>
+        <designable name="IWP-Jw-7Kt">
+            <size key="intrinsicContentSize" width="175" height="117.5"/>
+        </designable>
+        <designable name="ZjC-d4-xsi">
+            <size key="intrinsicContentSize" width="175" height="117.5"/>
+        </designable>
+        <designable name="fgS-Ax-8Hw">
+            <size key="intrinsicContentSize" width="220" height="29"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="no-request-layer1" width="175" height="117.5"/>
+        <image name="no-request-layer2" width="175" height="117.5"/>
+        <image name="no-request-layer3" width="175" height="117.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
