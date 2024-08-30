@@ -22,7 +22,7 @@ class NoDataViewController: UIViewController {
     }
     
     static func Show(presenter: UIViewController, message: String?, caption: String?, images: [String]?) -> NoDataViewController {
-        let controller = NoDataViewController(nibName: "NoDataViewController", bundle: nil)
+        let controller = NoDataViewController(nibName: "NoDataViewController", bundle: Bundle.module)
         controller.modalPresentationStyle = .overCurrentContext
         presenter.present(controller, animated: false, completion: nil)
         
@@ -52,7 +52,7 @@ class NoDataViewController: UIViewController {
     }
     
     static func addChild(presenter: UIViewController, message: String?, caption: String?, images: [String]?) -> NoDataViewController {
-        let controller = NoDataViewController(nibName: "NoDataViewController", bundle: nil)
+        let controller = NoDataViewController(nibName: "NoDataViewController", bundle: Bundle.module)
         presenter.addChild(controller)
         presenter.view.addSubview(controller.view)
         controller.view.translatesAutoresizingMaskIntoConstraints = false

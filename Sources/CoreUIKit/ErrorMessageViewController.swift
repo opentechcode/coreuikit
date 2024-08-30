@@ -21,7 +21,7 @@ class ErrorMessageViewController: UIViewController {
     }
 
     static func Show(presenter: UIViewController, errorMessage: String, target: Any?, selector: Selector?) -> ErrorMessageViewController {
-        let controller = ErrorMessageViewController(nibName: "ErrorMessageViewController", bundle: nil)
+        let controller = ErrorMessageViewController(nibName: "ErrorMessageViewController", bundle: Bundle.module)
         controller.modalPresentationStyle = .overCurrentContext
         presenter.present(controller, animated: false) {
             controller.errorMessageLabel.text = ""
@@ -36,7 +36,7 @@ class ErrorMessageViewController: UIViewController {
     }
     
     static func addChild(presenter: UIViewController, errorMessage: String, target: Any?, selector: Selector?) -> ErrorMessageViewController {
-        let controller = ErrorMessageViewController(nibName: "ErrorMessageViewController", bundle: nil)
+        let controller = ErrorMessageViewController(nibName: "ErrorMessageViewController", bundle: Bundle.module)
         presenter.addChild(controller)
         presenter.view.addSubview(controller.view)
         controller.view.translatesAutoresizingMaskIntoConstraints = false

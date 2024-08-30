@@ -22,14 +22,14 @@ class NoInternetViewController: UIViewController {
     }
 
     static func Show(presenter: UIViewController) -> NoInternetViewController {
-        let controller = NoInternetViewController(nibName: "NoInternetViewController", bundle: nil)
+        let controller = NoInternetViewController(nibName: "NoInternetViewController", bundle: Bundle.module)
         controller.modalPresentationStyle = .overCurrentContext
         presenter.present(controller, animated: false, completion: nil)
         return controller
     }
     
     static func addChild(presenter: UIViewController) -> NoInternetViewController {
-        let controller = NoInternetViewController(nibName: "NoInternetViewController", bundle: nil)
+        let controller = NoInternetViewController(nibName: "NoInternetViewController", bundle: Bundle.module)
         presenter.addChild(controller)
         presenter.view.addSubview(controller.view)
         controller.view.translatesAutoresizingMaskIntoConstraints = false

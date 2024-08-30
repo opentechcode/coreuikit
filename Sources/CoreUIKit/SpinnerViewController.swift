@@ -24,14 +24,14 @@ class SpinnerViewController: UIViewController {
     }
 
     static func Show(presenter: UIViewController) -> SpinnerViewController {
-        let controller = SpinnerViewController(nibName: "SpinnerViewController", bundle: nil)
+        let controller = SpinnerViewController(nibName: "SpinnerViewController", bundle: Bundle.module)
         controller.modalPresentationStyle = .overCurrentContext
         presenter.present(controller, animated: false, completion: nil)
         return controller
     }
     
     static func addChild(presenter: UIViewController) -> SpinnerViewController {
-        let controller = SpinnerViewController(nibName: "SpinnerViewController", bundle: nil)
+        let controller = SpinnerViewController(nibName: "SpinnerViewController", bundle: Bundle.module)
         presenter.addChild(controller)
         presenter.view.addSubview(controller.view)
         controller.view.translatesAutoresizingMaskIntoConstraints = false
