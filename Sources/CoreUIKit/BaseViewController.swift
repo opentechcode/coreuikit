@@ -86,6 +86,10 @@ open class BaseViewController: UIViewController, ViewStateDelegate {
         removeControllers()
     }
     
+    open func setUpForTheme() {
+        
+    }
+    
 
     //MARK: - View State Delegate Methods
     public func loadingState() {
@@ -113,7 +117,7 @@ open class BaseViewController: UIViewController, ViewStateDelegate {
            }
        }
     
-    public func noDataState(text: String?, caption: String?, info: [String]?, tag: Int) {
+    open func noDataState(text: String?, caption: String?, info: [String]?, tag: Int) {
         DispatchQueue.main.asyncAfter(deadline: dismissWait) { [weak self] in
             self?.dismissWait = .now() + 0.0
             if let self = self, self.noDataController == nil {
@@ -127,7 +131,7 @@ open class BaseViewController: UIViewController, ViewStateDelegate {
        
     }
     
-    public func errorState(error: String, tag: Int) {
+    open func errorState(error: String, tag: Int) {
         DispatchQueue.main.asyncAfter(deadline: dismissWait) { [weak self] in
             self?.dismissWait = .now() + 0.0
             if let self = self, self.errorMessageController == nil {
@@ -142,7 +146,7 @@ open class BaseViewController: UIViewController, ViewStateDelegate {
         }
     }
     
-    public func noInternetState(tag: Int) {
+    open func noInternetState(tag: Int) {
         DispatchQueue.main.asyncAfter(deadline: dismissWait) { [weak self] in
                 self?.dismissWait = .now() + 0.0
                 if let self = self, self.noInternetController == nil {
@@ -189,6 +193,18 @@ open class BaseViewController: UIViewController, ViewStateDelegate {
         viewController.willMove(toParent: nil)
         viewController.view.removeFromSuperview()
         viewController.removeFromParent()
+    }
+    
+    
+    
+    override open func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        guard let previousTraitCollection = previousTraitCollection else { return }
+
+        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            setUpForTheme()
+        }
     }
     
 }
