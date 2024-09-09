@@ -75,7 +75,7 @@ open class BaseViewController: UIViewController, ViewStateDelegate {
         viewStateManagers.append(manager)
     }
     
-    func createRefreshControl() -> UIRefreshControl {
+    public func createRefreshControl() -> UIRefreshControl {
         let refreshControl = UIRefreshControl()
         refreshControl.tintColor = UIColor.gray
         refreshControl.addTarget(self, action: #selector(retry), for: .valueChanged)
